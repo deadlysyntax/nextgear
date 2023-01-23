@@ -1,0 +1,19 @@
+{
+  "name": "nextgear",
+  "version": "0.0.1",
+  "description": "Auxiliary Toolkit for NextJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nextjs",
+    "framework",
+    "backend",
+    "database",
+    "cli",
+    "web-framework"
+  ],
+  "author": "Jaap Badlands",
+  "license": "MIT"
+}
