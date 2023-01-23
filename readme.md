@@ -6,13 +6,13 @@ While NextJs provides tools for frontend, server rendering, routing and api-endp
 ## Installation
 NextGear plugs in to an existing NextJs project. To install, run the following command in the root of your NextJs project:
 
-1. 
+
 ```
 npm install nextgear
 
 ```
 
-2. Add the following to the scripts section of your package.json file:
+Add the following to the scripts section of your package.json file:
 
 ```
 "scripts": {
@@ -20,7 +20,7 @@ npm install nextgear
 }
 ```
 
-3. Install the NextGear structure into your application by running the following command:
+Install the NextGear structure into your application by running the following command:
 
 ```
 
