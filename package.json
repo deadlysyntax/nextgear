@@ -2,9 +2,15 @@
   "name": "nextgear",
   "version": "0.0.1",
   "description": "Auxiliary Toolkit for NextJs",
-  "main": "index.js",
+  "types": "./dist/cjs/types/index.d.ts",
+  "main": "./dist/cjs/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv dist/esm/index.js dist/esm/index.mjs",
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "prepack": "npm run build"
   },
   "keywords": [
     "nextjs",
@@ -15,5 +21,28 @@
     "web-framework"
   ],
   "author": "Jaap Badlands",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deadlysyntax/nextgear/issues"
+  },
+  "homepage": "https://github.com/deadlysyntax/nextgear#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deadlysyntax/nextgear"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/types/index.d.ts",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist/**/*"
+ ]
 }
